@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจองเสื้อ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ระบบจองเสื้อ</h1>
+    <div class="shirt-container">
+        <div class="shirt-item">
+            <img src="https://drive.google.com/uc?id=13vztQQ2knr6oN3Zvk93x_Y4tkvITb9dW" alt="เสื้อคอปก" />
+            <h2>เสื้อคอปก</h2>
+        </div>
+        <div class="shirt-item">
+            <img src="https://drive.google.com/uc?id=1-x2SbYEoiHzEeKbT8LyndzuXZySZr2PQ" alt="เสื้อคอกลม" />
+            <h2>เสื้อคอกลม</h2>
+        </div>
+    </div>
+    
+    
+    <form id="bookingForm">
+        <label for="name">ชื่อผู้จอง:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">นามสกุล:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="phone">เบอร์โทร:</label>
+        <input type="text" id="phone" name="phone" pattern="0[0-9]{9}" required>
+
+        <label for="shirtType">ประเภทเสื้อ:</label>
+        <select id="shirtType" name="shirtType" required>
+            <option value="คอปก">คอปก</option>
+            <option value="คอกลม">คอกลม</option>
+        </select>
+
+        <label for="size">ขนาดเสื้อ:</label>
+        <select id="size" name="size" required>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+
+        <label for="quantity">จำนวน:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+        <button type="button" onclick="addItem()">เพิ่มรายการ</button>
+
+        <div id="priceDisplay">ราคารวม: 0 บาท</div>
+        <div class="cart-items" id="cartItems"></div>
+
+        <label for="paymentSlip">อัพโหลดสลิปการโอนเงิน:</label>
+        <input type="file" id="paymentSlip" name="paymentSlip" accept="image/*" required>
+
+        <button type="button" onclick="submitBooking()">ยืนยันการจองเสื้อ</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

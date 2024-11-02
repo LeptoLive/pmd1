@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.shirt-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.shirt-item {
+    margin: 0 15px;
+}
+
+.shirt-item img {
+    width: 200px;
+    height: auto;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input, select, button {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #FF9967;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #DCDCDC;
+}
+
+.cart-item {
+    border-top: 10px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-button {
+    background-color: #FF4C4C;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #FF1A1A;
+}
